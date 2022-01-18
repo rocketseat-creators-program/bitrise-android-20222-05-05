@@ -26,6 +26,20 @@ android {
         }
     }
 
+    flavorDimensions "env"
+    productFlavors {
+        dev {
+            dimension "env"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+        }
+        homol {
+            dimension "env"
+            applicationIdSuffix ".homol"
+            versionNameSuffix "-rc"
+        }
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
