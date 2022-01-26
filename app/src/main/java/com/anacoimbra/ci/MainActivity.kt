@@ -17,7 +17,7 @@ class MainActivity : ComponentActivity() {
             ContinuousDeliveryTheme {
                 // A surface container using the 'background' color from the theme
                 Surface(color = MaterialTheme.colors.background) {
-                    Greeting("Android")
+                    Greeting(BuildConfig.VERSION_NAME)
                 }
             }
         }
@@ -25,14 +25,14 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+fun Greeting(version: String) {
+    Text(text = "v $version")
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     ContinuousDeliveryTheme {
-        Greeting("Android")
+        Greeting(BuildConfig.VERSION_NAME)
     }
 }
