@@ -40,6 +40,9 @@ android {
             applicationIdSuffix ".homol"
             versionNameSuffix "-rc"
         }
+        prod {
+            dimension "env"
+        }
     }
 
     compileOptions {
